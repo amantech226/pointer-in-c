@@ -1,0 +1,22 @@
+#include <stdio.h>
+int *findmid(int a[],int n);
+int main()
+{
+    
+    int a[5]={25,55,98,45,66};
+    int len;
+    len=sizeof(a) / sizeof(a[0]);
+    int *mid;
+    
+    mid=findmid(a,len);
+    
+    printf("%d",*mid);
+    
+   
+    return 0;
+}
+
+int *findmid(int a[],int n)
+{
+    return &a[n/2];
+}
